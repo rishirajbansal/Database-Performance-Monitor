@@ -2,9 +2,8 @@
 
 ## Contents
 1. [Overview](#overview)
-2. [Prerequisites](#prerequisites)
-3. [Usage](#usage)
-4. [How It Works](#how-it-works)
+2. [Usage](#usage)
+3. [How It Works](#how-it-works)
 
 
 ## Overview
@@ -38,20 +37,10 @@ This is a menu based program to display various performance statistical data col
 
 - All results are produced in structured report in interactive format.
 
-- All configurations are managed at `.conf` file.
-
 - Database connection parameters are inherited from InfraSetup component and no need to maintain them separately.
 
 - Report is displayed directly in the local terminal
 
-
-
-## Prerequisites
-
-1. Infra Stack already deployed and running
-2. RDS Host Instances are running
-3. AWS profile is already set in AWS CLI (aws configure) locally based on the environment (dev, beta, externalQA, uat, staging, prod)
-4. jq is installed
 
 
 ## Usage
@@ -59,16 +48,13 @@ This is a menu based program to display various performance statistical data col
 From the terminal, run following commands:
 
 ```
-$ cd iac/launchers/dbManagement/dbPerformanceMonitor
+$ cd dbPerformanceMonitor
 $ chmod -R 777 *.sh
 $ ./run.sh <env>
 
 Possible values for env: 
 - dev / beta / externalQA / uat / staging / prod
 ```
-
-> *.pem key file is required inorder to send the script files to EC2 instance. Please ensure .pem key file is setup in `.conf` file*
-
 
 ## How it works
 
